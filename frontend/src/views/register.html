@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./bootstrap/css/bootstrap.min.css">
+    <style>
+        *{
+            user-select: none;
+        }
+    </style>
+</head>
+<body>
+    <header class="bg-dark py-3 text-center">
+        <div class="container">
+            <h2 class="text-white">File Upload</h2>
+        </div>
+    </header>
+
+    <main>
+        <section class="hero d-flex align-items-center" style="min-height: 88vh;">
+            <div class="container">
+                <div class="hero__inner text-center w-50 mx-auto">
+                    <h1>Register</h1>
+                    <form class="d-flex flex-column w-75 mx-auto js-form">
+                        <input class="form-control mb-3" type="text" name="name" id="name" placeholder="Name">
+                        <input class="form-control mb-3" type="text" name="lastname" id="lastname" placeholder="Last name">
+                        <input class="form-control mb-3" type="email" name="email" id="email" placeholder="Email">
+                        <input class="form-control mb-3" type="password" name="password" id="password" placeholder="Password">
+                        <input class="form-control mb-3" type="date" name="birth-date" id="birth-date">
+                        <button class="btn btn-primary mb-2" type="submit">Yuborish</button>
+                        <a  href="/login" >Do you have an account?</a>
+                    </form>
+                </div>
+            </div>
+        </section>
+    </main>
+    
+
+    <script src="./bootstrap/js/bootstrap.min.js"></script>
+    <script src="./JavaScript/types.js"></script>
+    <script src="./JavaScript/request.js"></script>
+    <script src="./JavaScript/register.js"></script>
+</body>
+</html>

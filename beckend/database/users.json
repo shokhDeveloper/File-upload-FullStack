@@ -1,0 +1,26 @@
+[
+    {
+        "name": "Shohijahon",
+        "lastname": "Musinkulov",
+        "email": "shohijahonmusinkulov@gmail.com",
+        "password": "47bc2639f23bf7e2c92683cc4f04004be0294ebc4fccaa9f01eeafdb3ffc3f70",
+        "birthDate": "2004-07-23",
+        "userId": 1
+    },
+    {
+        "name": "Sardor",
+        "lastname": "Quvondiqov",
+        "email": "sardor@gmail.com",
+        "password": "1d0d048fec60af530011c0ae328d52216e9d9484674438c95c39fc4d632910fa",
+        "birthDate": "2006-12-12",
+        "userId": 2
+    },
+    {
+        "name": "Abror",
+        "lastname": "Axmedov",
+        "email": "abror@gmail.com",
+        "password": "278697ff8019a936f9960bc380744ae44ea1922754f08d8fad8a7752ef611b1e",
+        "birthDate": "2006-02-21",
+        "userId": 3
+    }
+]
