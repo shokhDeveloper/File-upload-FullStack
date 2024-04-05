@@ -22,5 +22,13 @@
         "password": "278697ff8019a936f9960bc380744ae44ea1922754f08d8fad8a7752ef611b1e",
         "birthDate": "2006-02-21",
         "userId": 3
+    },
+    {
+        "name": "Sardor",
+        "lastname": "Khuvondikov",
+        "email": "quvondiqovs06@gmail.com",
+        "password": "7f2b190505d5e53eaab24b7e5f8b7464b6a4d797ebfdb8c26a27fc14f42b7840",
+        "birthDate": "2006-12-20",
+        "userId": 4
     }
 ]

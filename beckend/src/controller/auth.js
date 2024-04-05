@@ -19,7 +19,7 @@ const authController = {
                 }
                 users.push(user)
                 req.writeData("users", users);
-                res.status(201).json({message: "The user successfull registred !", accessToken: sign({userId: user.userId}, "BECKEND_KEY", { expiresIn: "1d"}),  user})
+                res.status(201).json({message: "The user successfull registred !", accessToken: sign({userId: user.userId, userAgent: req.headers["user-agent"]}, "BECKEND_KEY", { expiresIn: "1d"}),  user})
             }
         }catch(error){
             res.status(400).json({message: error.message})
@@ -32,7 +32,7 @@ const authController = {
             const user = users.find(user => user.email == email || user.email == replaceMail(email));
             if(user){
                 if(user.password == sha256(password)){
-                    res.json({message: "User successfull logined !", statusCode: 200, user, accessToken: sign({userId: user.userId}, "BECKEND_KEY", {expiresIn: "1d"}), user}).status(200)
+                    res.json({message: "User successfull logined !", statusCode: 200, user, accessToken: sign({userId: user.userId, userAgent: req.headers["user-agent"]}, "BECKEND_KEY", {expiresIn: "1d"}), user}).status(200)
                 }else{
                     res.status(400).json({message: "Password its invalid", statusCode: 400})
                 }

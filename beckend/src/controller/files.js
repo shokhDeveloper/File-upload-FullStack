@@ -2,7 +2,13 @@ const path = require("path");
 const filesController = {
     GET: function(req, res) {
         const files = req.getData("files");
-        res.json(files)
+        if(Object.keys(req.params).length){
+            const userFiles = files.filter(file => file.userId == req.params.userId);
+            res.json(userFiles)
+        }else{
+            const files = req.getData("files");
+            res.json(files)
+        }
     },
     
     POST: function(req, res) {

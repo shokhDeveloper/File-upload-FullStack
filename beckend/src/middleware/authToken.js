@@ -3,8 +3,8 @@ const authToken = (req, res, next) => {
     try{
         const users = req.getData("users");
         const {token} = req.headers;
-        const {userId} = verify(token, "BECKEND_KEY");
-        if(userId && users.some(user => user.userId == userId)){
+        const parsedToken = verify(token, "BECKEND_KEY");
+        if(parsedToken.userId && users.some(user => user.userId == parsedToken.userId) && parsedToken.userAgent == req["headers"]["user-agent"]){
             return next()
         }else{
             throw new Error("Invalid token")

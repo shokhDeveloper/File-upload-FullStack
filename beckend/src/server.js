@@ -17,16 +17,22 @@ app.use(express.json());
 app.use(model)
 
 app.use("/auth", authRouter);
-app.use("/getFile/", express.static(path.join(__dirname, "files")))
 app.get("/download/:downloadFile", (req, res) => {
     const {downloadFile} = req.params
     let filePath = path.join(__dirname, "files", downloadFile );
     const file = fs.existsSync(filePath);
     if(file){
         res.download(filePath)
+    }else{
+        res.status(404).json({message: "Topilmadi"})
     }
 })
 app.use(authToken)
+app.get("/getFile/:file",(req, res) => {
+    const {file} = req.params;
+    const resFile = path.join(__dirname, "files", file)
+    res.sendFile(resFile)
+})
 
 app.use("/users", userRouter)
 app.use("/files", filesRouter)
